@@ -28,7 +28,7 @@
 -- parse arguments
 DEFINE DBVERSION=&1;
 
-SELECT 'Creating packages ''citydb_util'', ''citydb_constraint'', ''citydb_idx'', ''citydb_srs'', ''citydb_stat'', ''citydb_envelope'', ''citydb_delete_by_lineage'', ''citydb_delete'', and corresponding types' as message from DUAL;
+SELECT 'Creating packages ''citydb_util'', ''citydb_constraint'', ''citydb_idx'', ''citydb_srs'', ''citydb_stat'', ''citydb_envelope'', ''citydb_delete'', and corresponding types' as message from DUAL;
 @@PL_SQL/CITYDB_PKG/UTIL/UTIL.sql;
 @@PL_SQL/CITYDB_PKG/CONSTRAINT/CONSTRAINT.sql;
 @@PL_SQL/CITYDB_PKG/INDEX/IDX.sql;
@@ -57,5 +57,4 @@ FROM dual;
 
 @@&DELETE
 
-@@PL_SQL/CITYDB_PKG/DELETE/DELETE_BY_LINEAGE;
-SELECT 'Packages ''citydb_util'', ''citydb_constraint'', ''citydb_idx'', ''citydb_srs'', ''citydb_stat'', ''citydb_envelope'', ''citydb_delete_by_lineage'', and ''citydb_delete'' created' as message from DUAL;
+SELECT 'Packages ''citydb_util'', ''citydb_constraint'', ''citydb_idx'', ''citydb_srs'', ''citydb_stat'', ''citydb_envelope'' and ''citydb_delete'' created' as message from DUAL;
